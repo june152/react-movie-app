@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import Movie from "../component/Movie"
+import styles from "./Home.module.css"
 
 export default function Home() {
     const [loading, setLoading] = useState(true)
@@ -16,9 +17,9 @@ export default function Home() {
     data()
   }, [])
   return (
-    <div>
+    <div className={styles.container}>
       {loading ? <h1>Loading....</h1> : 
-      <div>{items.map(
+      <div className={styles.movies}>{items.map(
         (item) => 
         <Movie 
           key={item.id}
@@ -26,7 +27,8 @@ export default function Home() {
           coverImg={item.medium_cover_image} 
           title={item.title} 
           summary={item.summary} 
-          genres={item.genres} />
+          genres={item.genres}
+          year={item.year} />
         )
         }
       </div>}
