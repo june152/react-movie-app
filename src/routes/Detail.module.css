@@ -1,0 +1,34 @@
+.detail {
+    display: flex;
+    justify-content: center;
+}
+
+.detail__item {
+    display: grid;
+}
+
+.detail__info {
+    margin-left: 45%;
+}
+
+.detail__div {
+    grid-gap: 10px;
+    padding: 10px;
+    width: 20%;
+    padding-top: 100px;
+}
+
+.detail__genres {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0px;
+    font-size: 14px;
+  }
+
+  .detail__genres li{
+    margin-right: 10px;
+    font-size: 14px;
+  }
